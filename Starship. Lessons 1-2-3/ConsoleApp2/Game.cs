@@ -43,6 +43,17 @@ namespace ConsoleApp2
         
         public static void Init(Form form)
         {
+           //добавим проверку на размеры формы
+            if (form.ClientSize.Width < 0 
+                || form.ClientSize.Height<0 
+                || form.ClientSize.Width>1000 
+                || form.ClientSize.Height>1000)
+            {
+                throw new ArgumentOutOfRangeException();
+            }
+            
+            
+            
             // Графическое устройство для вывода графики            
             Graphics g;
             // Предоставляет доступ к главному буферу графического контекста для текущего приложения
