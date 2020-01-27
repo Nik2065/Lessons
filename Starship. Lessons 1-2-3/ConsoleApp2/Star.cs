@@ -1,9 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ConsoleApp2
 {
@@ -24,6 +20,18 @@ namespace ConsoleApp2
             Pos.X = Pos.X - Dir.X;
             if (Pos.X < 0) Pos.X = Game.Width + Size.Width;
             if (Pos.X > Game.Width) Pos.X = 0;
+
+            var canShow = "";
+            if (Pos.X > 0 && Pos.X < Game.Width && Pos.Y > 0 && Pos.Y < Game.Height)
+            {
+                canShow = "Отображается";
+            }
+            else
+            {
+                canShow = "Не отображается";
+            }
+
+            Console.WriteLine($"X={Pos.X}| Y={Pos.Y} {canShow}");
         }
 
     }
