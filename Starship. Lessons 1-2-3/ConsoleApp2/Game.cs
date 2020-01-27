@@ -6,6 +6,7 @@ namespace ConsoleApp2
 {
     static class Game
     {
+        static readonly Image _backgroungImage = Image.FromFile("space.jpg");
         private static BufferedGraphicsContext _context;
         public static BufferedGraphics Buffer;
         // Свойства
@@ -63,6 +64,8 @@ namespace ConsoleApp2
         public static void Draw()
         {
             Buffer.Graphics.Clear(Color.Black);
+            Buffer.Graphics.DrawImage(_backgroungImage, new Point(0, 0));
+
             foreach (BaseObject obj in _objs)
                 obj.Draw();
 
