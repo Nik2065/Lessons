@@ -1,0 +1,18 @@
+﻿<Window x:Class="HelloWpf.DepartmentWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:HelloWpf"
+        mc:Ignorable="d"
+        Title="Департаменты" Height="450" Width="800" ResizeMode="NoResize">
+    <Grid>
+
+        <ListBox HorizontalAlignment="Right" x:Name="LbDepartments"  Width="300"/>
+        <Button x:Name="BtnAddDepartment" Height="25" Content="Добавить департамент" HorizontalAlignment="Right"  VerticalAlignment="Center" Width="150" Margin="0,178,305.264,219.038" Click="BtnAddDepartment_Click" />
+        <TextBox x:Name="TbDepartmentName" HorizontalAlignment="Left" Height="23" Margin="10,89,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="230"/>
+        <Label Content="Наименование департамента" HorizontalAlignment="Left" Margin="10,60,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="BtnDeleteDepartment" Height="25" Content="Удалить департамент" HorizontalAlignment="Right"  VerticalAlignment="Center" Width="150" Margin="0,227,305.264,170.038" Click="BtnDeleteDepartment_Click" />
+
+    </Grid>
+</Window>

@@ -1,0 +1,22 @@
+﻿<Window x:Class="HelloWpf.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:HelloWpf"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Menu Height="25" VerticalAlignment="Top">
+            <MenuItem  Height="25"  Header="Файл">
+                <MenuItem Height="25" Header="Выход" Click="BtnExit_Click"></MenuItem>
+            </MenuItem>
+            <MenuItem x:Name="BtnDepartmenItem"  Height="25"  Header="Департаменты" Click="BtnDepartmenItem_Click" >
+            </MenuItem>
+            <MenuItem  Height="25" Click="BtnEmployeeItem_Click"  Header="Исполнители">
+            </MenuItem>
+
+        </Menu>
+
+    </Grid>
+</Window>
