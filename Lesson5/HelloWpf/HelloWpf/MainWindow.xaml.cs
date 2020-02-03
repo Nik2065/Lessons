@@ -35,9 +35,9 @@ namespace HelloWpf
             Store.DepartmentList.Add(new Department { Id = 2, Name = "Департамент 3" });
 
             Store.EmployeeList = new List<Employee>();
-            Store.EmployeeList.Add(new Employee { Id = 0, Name = "Василий Петрович" });
-            Store.EmployeeList.Add(new Employee { Id = 1, Name = "Леонид Васильевич" });
-            Store.EmployeeList.Add(new Employee { Id = 2, Name = "Александр Антонович" });
+            Store.EmployeeList.Add(new Employee { Id = 0, Name = "Василий Петрович", DepartmentId = 0});
+            Store.EmployeeList.Add(new Employee { Id = 1, Name = "Леонид Васильевич", DepartmentId = 0});
+            Store.EmployeeList.Add(new Employee { Id = 2, Name = "Александр Антонович", DepartmentId = 5});
         }
 
 

@@ -3,10 +3,18 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:HelloWpf"
         mc:Ignorable="d"
         Title="Исполнители" Height="450" Width="800">
-    <Grid>
-        
+    <Grid Height="420" Margin="0,0,0.453,0.226" VerticalAlignment="Bottom">
+
+
+        <DataGrid CanUserAddRows="False" CanUserDeleteRows="False" Width="300" HorizontalAlignment="Right"  x:Name="DgEmployeers" Padding="50,0,0,0" Margin="0,0,-0.226,0"  />
+        <TextBox x:Name="TbEmployeeName" HorizontalAlignment="Left" Height="23" Margin="59,127,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="185"/>
+        <Label Content="Имя исполнителя" HorizontalAlignment="Left" Margin="94,103,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.639,-0.218"/>
+        <Button x:Name="TbAddEmployee" Content="Добавить исполнителя" HorizontalAlignment="Left" Margin="59,209,0,0" VerticalAlignment="Top" Width="185" Click="TbAddEmployee_OnClick"/>
+        <Button x:Name="BtnDeleteEmployee" Content="Удалить исполнителя" HorizontalAlignment="Left" Margin="59,243,0,0" VerticalAlignment="Top" Width="185" Click="BtnDeleteEmployee_OnClickDeleteEmployee_Click"/>
+        <ComboBox x:Name="CbDepartments" HorizontalAlignment="Left" Margin="262,127,0,0" VerticalAlignment="Top" Width="188"/>
+        <Button Content="Редактировать" x:Name="BtnEditEmployee" HorizontalAlignment="Left" Margin="59,277,0,0" VerticalAlignment="Top" Width="80" Click="BtnEditEmployee_OnClick"/>
+        <Button Content="Сохранить" x:Name="BtnSaveEmployee" HorizontalAlignment="Left" Margin="144,277,0,0" VerticalAlignment="Top" Width="100" Click="BtnSaveEmployee_OnClick"/>
     </Grid>
 </Window>

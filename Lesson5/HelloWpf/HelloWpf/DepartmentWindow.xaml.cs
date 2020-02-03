@@ -40,7 +40,7 @@ namespace HelloWpf
         {
             var d = new Department
             {
-                Id = GenerateDepartmentId(),
+                Id = Store.GenerateDepartmentId(),
                 Name = TbDepartmentName.Text
             };
 
@@ -48,15 +48,6 @@ namespace HelloWpf
             LoadDepartmentList();
         }
 
-        private int GenerateDepartmentId()
-        {
-            int newId = 0;
-            if (Store.DepartmentList != null && Store.DepartmentList.Count>0)
-            {
-                var maxId = Store.DepartmentList.Select(e => e.Id).Max();
-                newId = maxId++;
-            }
-            return newId;
-        }
+
     }
 }

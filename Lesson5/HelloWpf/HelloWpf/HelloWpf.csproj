@@ -61,6 +61,7 @@
     <Compile Include="DepartmentWindow.xaml.cs">
       <DependentUpon>DepartmentWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Entities\TableViewEmployee.cs" />
     <Compile Include="Store.cs" />
     <Page Include="EmployeeWindow.xaml">
       <SubType>Designer</SubType>

@@ -12,28 +12,27 @@ namespace HelloWpf
         public static List<Employee> EmployeeList;
         public static List<Department> DepartmentList;
 
+        public static int GenerateDepartmentId()
+        {
+            int newId = 0;
+            if (Store.DepartmentList != null && Store.DepartmentList.Count > 0)
+            {
+                var maxId = Store.DepartmentList.Select(e => e.Id).Max();
+                newId = maxId++;
+            }
+            return newId;
+        }
 
-        //public static List<Employee> GetEmployeeList()
-        //{
-        //    var result = new List<Employee>();
+        public static int GenerateEmployeeId()
+        {
+            int newId = 0;
+            if (Store.EmployeeList != null && Store.EmployeeList.Count > 0)
+            {
+                var maxId = Store.EmployeeList.Select(e => e.Id).Max();
+                newId = maxId++;
+            }
+            return newId;
+        }
 
-        //    result.Add(new Employee{Id = 0, Name = "Василий Петрович"});
-        //    result.Add(new Employee { Id = 1, Name = "Леонид Васильевич" });
-        //    result.Add(new Employee { Id = 2, Name = "Александр Антонович" });
-
-        //    return result;
-        //}
-
-
-        //public static List<Department> GetDepartmentList()
-        //{
-        //    var result = new List<Department>();
-
-        //    result.Add(new Department { Id = 0, Name = "Департамент 1" });
-        //    result.Add(new Department { Id = 1, Name = "Департамент 2" });
-        //    result.Add(new Department { Id = 2, Name = "Департамент 3" });
-
-        //    return result;
-        //}
     }
 }
